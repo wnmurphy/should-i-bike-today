@@ -19,26 +19,44 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
+  Should I Bike In Today?
+
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+
+  Checks weather conditions for the ride in to work or school, so you can opt to drive instead.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
+  Have you ever looked outside in the morning and wondered whether you should bike or drive to work that day? This app answers your question with a simple 'Yes' or 'No'. Enter your departure time and return time, and the app uses location services to check the weather for both legs of your commute.
+
 ## Problem ##
   > Describe the problem your product solves.
+
+  Never get stuck at work on a rainy day again.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
 
+  'Should I Bike In Today?' conveniently checks the weather for both legs of your commute, so you know in advance if you'll get stuck at work in a rainstorm when 5pm comes.
+
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+
+  'For all you cyclists returning home after a hard day at work with soggy clothes and a sweet mudstripe up your back, salvation has come.'
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
+  Simply enter your departure time and return time, and we'll let you know whether you should bike in today.
+
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
+  'This app is exactly what I needed. Sure I could just check the weather, but this curates the exact information I need, and converts it to a simple yes or no an answer.  I can't be bothered to think those extra thoughts! I'm important, dammit.'
+
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+
+  If you too would like to be saved from unneccesary commute moisture, visit shouldibiketoday.com.
