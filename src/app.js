@@ -7,15 +7,17 @@ angular.module('shouldIBikeToday', ['shouldIBikeToday.services'])
 ])
 
 .controller('tripController', function($scope, Trip){
-  $scope.departTime; // stores user HTML time input 
-  $scope.decision; // passed to getWeather call, stores boolean result
-
+  $scope.departTime = Date.now();
+  $scope.rain; // passed to getWeather call, stores boolean result
+  
   // Wrapper function for call to getWeather service.
-  $scope.getWeather = function(time, result){
-    Trip.getWeather($scope.departTime,  $scope.decision);
+  $scope.getWeather = function(time, rain){
+    $scope.rain = Trip.getWeather($scope.departTime, $scope.rain);
   };
+
+  if(!!$scope.rain === false){
+    $scope.rainText = 'No rain in next 30 minutes. Bike away!';
+  }else if(!!$scope.rain === true){
+    $scope.rainText = 'Looks soggy. Better drive today.';
+  }
 });
-
-
-// var now = Date.now();
-  // time1 = moment.unix(now);
