@@ -2,6 +2,7 @@ angular.module('shouldIBikeToday.services', [])
 
 .factory('Trip', function ($http) {
   var api_base = 'https://api.forecast.io/forecast/ee14bf968ac6494ddc8bf6fc90e0e815/37.402965,-122.04998610000001,';
+  //var api_base = 'https://api.forecast.io/forecast/ee14bf968ac6494ddc8bf6fc90e0e815/40.7127,74.0059,';
 
   var query = '?exclude=[currently,hourly,daily,alerts,flags]';
 
@@ -13,7 +14,7 @@ angular.module('shouldIBikeToday.services', [])
                     return false;
                   };
  
-  var getWeather = function(time, rain){
+  var getWeather = function(time){
         // trim the time
         time = time.toString();
         time = time.slice(0, time.length-3);
@@ -23,16 +24,16 @@ angular.module('shouldIBikeToday.services', [])
         return $http({
           method: 'GET',
           url: api
-        }).success(function(result){
+        }).then(function(result){
           console.log(result);
-          // map precipitation probability for next 30 minutes
-          var precipOdds = result.minutely.data.filter(function(minute){
+          // filter precipitation probability for next 30 minutes
+          var precipOdds = result.data.minutely.data.filter(function(minute){
             return minute.precipProbability > 0.1;
           });
           rain = gonnaRain(precipOdds);
           console.log(rain);
           return rain;
-        }).error(function(error){
+        }).catch(function(error){
           console.error(error);
         })
       };

@@ -12,7 +12,9 @@ angular.module('shouldIBikeToday', ['shouldIBikeToday.services'])
   
   // Wrapper function for call to getWeather service.
   $scope.getWeather = function(time, rain){
-    $scope.rain = Trip.getWeather($scope.departTime, $scope.rain);
+    Trip.getWeather($scope.departTime).then(function(x){
+      $scope.rain = x;
+    });
   };
 
   if(!!$scope.rain === false){

@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <title>Should I Bike Today?</title>
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div ng-controller="tripController">
@@ -13,8 +15,7 @@
       <form name="tripInfo" ng-submit='getWeather()'>
         <button>Get trip weather.</button>
       </form>
-      <p ng-if="rain !== undefined">{{ rainText }}</p>
-      
+      <p ng-if="rain === true || rain === false">{{ rainText }}</p>
     </div>
 
     <script src="lib/angular.js"></script>
