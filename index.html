@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='shouldIBikeToday'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Should I Bike Today?</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+  </head>
+  <body>
+    <div ng-controller="tripController">
+      <h1>Should I Bike Today?</h1>
+
+      <form name="tripInfo" ng-submit='getWeather()'>
+        <p>Enter your departure time:</p>
+        <!-- Get departure time and send to controller -->
+        <input type="time" ng-model="departTime">
+        <!-- <p>Enter your return time:</p> -->
+        <!-- <input type="time" ng-model="returnTime"> -->
+
+        <!-- Clicking button calls getWeather with departTime-->
+        <button>Get trip weather.</button>
+      </form>
+
+      <p>Make sure location services is on.</p>
+    </div>
+
+    <script src="lib/angular.js"></script>
+    <script src="src/services.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
