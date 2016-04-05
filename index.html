@@ -10,12 +10,15 @@
   <body>
     <div ng-controller="tripController">
       <h1>Should I Bike Today?</h1>
-      <h3>Find out if it'll rain on your way to/from work/school.</h3>
+      <h3>Find out if it'll rain on your way to work or school.</h3>
       <p>(Make sure location services is on.)</p>
       <form name="tripInfo" ng-submit='getWeather()'>
         <button>Get trip weather.</button>
       </form>
       <p ng-if="rain === true || rain === false">{{ rainText }}</p>
+      <div ng-if="rain===false">
+      <img src="https://fitisafeministissue.files.wordpress.com/2014/08/wpid-img_22400955656443.jpeg" >
+      </div>
     </div>
 
     <script src="lib/angular.js"></script>
